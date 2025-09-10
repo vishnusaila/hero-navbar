@@ -1,0 +1,47 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #333;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.hamburger {
+  display: none; /* hidden on desktop */
+  flex-direction: column;
+  cursor: pointer;
+  gap: 0.3rem;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background: white;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: -100%; /* hide menu by default */
+    flex-direction: column;
+    background: #333;
+    width: 100%;
+    transition: 0.3s;
+  }
+
+  .nav-links.open {
+    left: 0; /* show menu when open */
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

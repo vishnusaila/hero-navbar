@@ -1,0 +1,61 @@
+.hero {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('https://via.placeholder.com/1500x900') center/cover no-repeat;
+  text-align: center;
+  color: rgb(18, 17, 17);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-button {
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background-color: #ff6600;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.hero-button:hover {
+  background-color: #e55a00;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+}
